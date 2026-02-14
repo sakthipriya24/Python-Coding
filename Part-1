@@ -39,10 +39,47 @@ def prime_numbers_till_n(n):
                 li[k]=False
         i+=1
     return [val for val in range(len(li)) if li[val] is True]
+
+def palindrome(n):
+    num=n
+    res=0
+    if n<0:
+        return False
+    while n>0:
+        d=n%10
+        res=res*10+d
+        n=n//10
+    return num==res
+
+def count_of_digits(n):
+    c=0
+    n=abs(n)
+    while n>0:
+        c+=1
+        n=n//10
+    return c
+    
+def armstrong_number(n):
+    c=0
+    num=n
+    res=0
+    while n>0:
+        c+=1
+        n=n//10
+    n=num
+    while n>0:
+        d=n%10
+        res+=d**c
+        n=n//10
+    return res==num
     
 print(sum_of_num_from_1_to_n(10))
 print(sum_of_digits(121))
 print(reverse_number(1234))
 print(prime_number(29))
 print(prime_numbers_till_n(13))
+print(palindrome(121))
+print(count_of_digits(123))
+print(armstrong_number(9474))
+
 
