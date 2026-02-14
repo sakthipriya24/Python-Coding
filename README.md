@@ -2,15 +2,18 @@
 
 This repository provides Python coding practice problems to enhance your logical thinking and problem-solving skills. It is intended for coding practice to develop solution-thinking, with questions ranging in difficulty from easy to hard.
 
-1. Sum of digits
-2. Reverse a number
-3. Prime number
-4. Prime number between the ranges
-5. Palindrome
-6. Count of digits of a number
-7. Armstrong number
-8. Strong number
-9. Perfect number
-10. Automorphic number
-11. Harshad or Niven number
-12. Neon number
+## Part-1
+
+1. Sum of numbers from 1 to n
+2. Sum of digits
+3. Reverse a number
+4. Prime number
+5. Prime number between the ranges
+6. Palindrome
+7. Count of digits of a number
+8. Armstrong number
+9. Strong number
+10. Perfect number
+11. Automorphic number
+12. Harshad or Niven number
+13. Neon number
