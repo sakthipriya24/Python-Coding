@@ -17,3 +17,9 @@ This repository provides Python coding practice problems to enhance your logical
 11. Automorphic number
 12. Harshad or Niven number
 13. Neon number
+
+## Part-2
+
+14. GCD of two numbers using Euclidean method
+15. GCD of two numbers using brute force method
+16. GCD of two numbers using math method
