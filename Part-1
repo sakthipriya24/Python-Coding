@@ -72,6 +72,34 @@ def armstrong_number(n):
         res+=d**c
         n=n//10
     return res==num
+
+def strong_number(n):
+    temp=0
+    num=n
+    while n>0:
+        res=1
+        d=n%10
+        for i in range(1,d+1):
+            res*=i
+        temp+=res
+        n=n//10
+    return temp==num
+    
+def perfect_number(n):
+    res=0
+    for i in range(1,(n//2)+1):
+        if n%i==0:
+            res+=i
+    return res==n
+
+def automorphic_number(n):
+    num=n
+    c=0
+    while n>0:
+        c+=1
+        n=n//10
+    n=num*num
+    return n%(10**c) == num
     
 print(sum_of_num_from_1_to_n(10))
 print(sum_of_digits(121))
@@ -81,5 +109,9 @@ print(prime_numbers_till_n(13))
 print(palindrome(121))
 print(count_of_digits(123))
 print(armstrong_number(9474))
+print(strong_number(145))
+print(perfect_number(6))
+print(automorphic_number(25))
+
 
 
