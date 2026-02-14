@@ -1,0 +1,48 @@
+def sum_of_num_from_1_to_n(n):
+    return n*(n+1)//2
+    
+def sum_of_digits(n):
+    total=0
+    while n>0:
+        d=n%10
+        total+=d
+        n=n//10
+    return total
+
+def reverse_number(n):
+    res=0
+    while n>0:
+        d=n%10
+        res=res*10+d
+        n=n//10
+    return res
+    
+def prime_number(n):
+    i=2
+    if n==0 or n==1:
+        return False
+    if n==2:
+        return True
+    while i<=n**0.5:
+        if n%i==0:
+            return False
+        i+=1
+    return True 
+    
+def prime_numbers_till_n(n):
+    li=[True]*(n+1)
+    li[0],li[1] = False, False
+    i=2
+    while i<=n**0.5:
+        if li[i] is True:
+            for k in range(i*i,n+1,i):
+                li[k]=False
+        i+=1
+    return [val for val in range(len(li)) if li[val] is True]
+    
+print(sum_of_num_from_1_to_n(10))
+print(sum_of_digits(121))
+print(reverse_number(1234))
+print(prime_number(29))
+print(prime_numbers_till_n(13))
+
