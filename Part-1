@@ -100,7 +100,25 @@ def automorphic_number(n):
         n=n//10
     n=num*num
     return n%(10**c) == num
-    
+
+def harshad_number(n):
+    num=n
+    res=0
+    while n>0:
+        d=n%10
+        res+=d
+        n=n//10
+    return num%res==0
+
+def neon_number(n):
+    num=n*n
+    res=0
+    while num>0:
+        d=num%10
+        res+=d
+        num=num//10
+    return res==n
+
 print(sum_of_num_from_1_to_n(10))
 print(sum_of_digits(121))
 print(reverse_number(1234))
@@ -112,6 +130,7 @@ print(armstrong_number(9474))
 print(strong_number(145))
 print(perfect_number(6))
 print(automorphic_number(25))
-
+print(harshad_number(18))
+print(neon_number(9))
 
 
