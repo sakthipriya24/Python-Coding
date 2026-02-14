@@ -1,0 +1,25 @@
+def gcd_euclidean(n1,n2):
+    if n2==0:
+        return n1
+    return gcd_euclidean(n2,n1%n2)
+    
+def gcd_brute_force(n1,n2):
+    if n1<n2:
+        min_num = n1
+    else:
+        min_num = n2
+    for i in range(min_num,1,-1):
+        if n1%i==0 and n2%i==0:
+            return i
+    return 1
+
+def gcd_method(n1,n2):
+    import math
+    return math.gcd(n1,n2)
+
+
+
+print(gcd_euclidean(48,18))
+print(gcd_brute_force(7,9))
+print(gcd_method(48,18))
+
