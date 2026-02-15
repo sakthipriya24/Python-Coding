@@ -22,6 +22,17 @@ def is_sorted(li):
             return False
     return True
 
+def remove_duplicates_two_pointer(sorted_li):
+    read = 1
+    write = 1
+    while read<len(sorted_li):
+        if sorted_li[read]!=sorted_li[read-1]:
+            sorted_li[write]=sorted_li[read]
+            write+=1
+        read+=1
+    return write
+
 print(find_largest([3, 7, 2, 9, 5]))
 print(find_second_largest([3,7,2,9,5]))
 print(is_sorted([1,2,3,4]))
+print(remove_duplicates_two_pointer([1, 1, 2, 2, 3]))
