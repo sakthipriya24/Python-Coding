@@ -32,7 +32,19 @@ def remove_duplicates_two_pointer(sorted_li):
         read+=1
     return write
 
+def move_zeros_to_end_two_pointer(li):
+    read=0
+    write=0
+    while read<len(li):
+        if li[read]!=0:
+            li[write]=li[read]
+            li[read]=0
+            write+=1
+        read+=1
+    return li
+
 print(find_largest([3, 7, 2, 9, 5]))
 print(find_second_largest([3,7,2,9,5]))
 print(is_sorted([1,2,3,4]))
 print(remove_duplicates_two_pointer([1, 1, 2, 2, 3]))
+print(move_zeros_to_end_two_pointer([0,1,0,3,12]))
