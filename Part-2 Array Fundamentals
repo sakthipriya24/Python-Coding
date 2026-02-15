@@ -38,7 +38,8 @@ def move_zeros_to_end_two_pointer(li):
     while read<len(li):
         if li[read]!=0:
             li[write]=li[read]
-            li[read]=0
+            if read!=write: # works for non zero list of elements
+                li[read]=0
             write+=1
         read+=1
     return li
