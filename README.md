@@ -27,4 +27,4 @@ This repository provides Python coding practice problems to enhance your logical
 18. Second largest number of all elements
 19. Check whether the list is sorted in ascending order
 20. Remove duplicates in place and return the unique elements count
-21. 
+21. Move zeros to end in place
