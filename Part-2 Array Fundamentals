@@ -53,9 +53,23 @@ def reverse_array_in_place(li):
         write-=1
     return li
 
+def reverse_helper(li, read, write):
+    while read<write:
+        li[read],li[write]=li[write],li[read]
+        read+=1
+        write-=1
+        
+def rotate_by_k(li, k):
+    k = k%len(li) # avoid unnecessary rotations
+    reverse_helper(li, 0, len(li)-1)
+    reverse_helper(li, 0, k-1)
+    reverse_helper(li, k, len(li)-1)
+    return li
+
 print(find_largest([3, 7, 2, 9, 5]))
 print(find_second_largest([3,7,2,9,5]))
 print(is_sorted([1,2,3,4]))
 print(remove_duplicates_two_pointer([1, 1, 2, 2, 3]))
 print(move_zeros_to_end_two_pointer([0,1,0,3,12]))
 print(reverse_array_in_place([1,2,3,4,5]))
+print(rotate_by_k([1,2,3,4,5,6,7],3))
