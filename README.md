@@ -23,4 +23,6 @@ This repository provides Python coding practice problems to enhance your logical
 
 ## Part-2 Array Fundamentals
 
-17. 
+17. Largest number of all elements
+18. Second largest number of all elements
+19. 
