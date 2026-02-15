@@ -60,6 +60,8 @@ def reverse_helper(li, read, write):
         write-=1
         
 def rotate_by_k(li, k):
+    if not li:
+        return li
     k = k%len(li) # avoid unnecessary rotations
     reverse_helper(li, 0, len(li)-1)
     reverse_helper(li, 0, k-1)
