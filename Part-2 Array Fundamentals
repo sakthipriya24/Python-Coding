@@ -16,5 +16,12 @@ def find_second_largest(li):
             second_large=num
     return second_large
 
+def is_sorted(li):
+    for i in range(len(li)-1):
+        if li[i]>li[i+1]:
+            return False
+    return True
+
 print(find_largest([3, 7, 2, 9, 5]))
 print(find_second_largest([3,7,2,9,5]))
+print(is_sorted([1,2,3,4]))
