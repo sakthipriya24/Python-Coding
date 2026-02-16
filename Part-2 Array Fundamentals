@@ -76,6 +76,18 @@ def max_sub_arr_sum_kadane_alg(arr):
         max_sum=max(max_sum, current_sum)
     return max_sum
 
+def sub_arr_with_given_sum_sliding_window(arr, k):
+    left = 0
+    current_sum = 0
+    for right in range(len(arr)):
+        current_sum += arr[right]
+        while current_sum > k:
+            current_sum -= arr[left]
+            left += 1
+        if current_sum == k:
+            return True
+    return False
+
 print(find_largest([3, 7, 2, 9, 5]))
 print(find_second_largest([3,7,2,9,5]))
 print(is_sorted([1,2,3,4]))
@@ -84,3 +96,5 @@ print(move_zeros_to_end_two_pointer([0,1,0,3,12]))
 print(reverse_array_in_place([1,2,3,4,5]))
 print(rotate_by_k([1,2,3,4,5,6,7],3))
 print(max_sub_arr_sum_kadane_alg([-5, -2, -3]))
+print(sub_arr_with_given_sum_sliding_window([1, 2, 3, 4, 5], 9))
+
