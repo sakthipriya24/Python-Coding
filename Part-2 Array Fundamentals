@@ -68,6 +68,14 @@ def rotate_by_k(li, k):
     reverse_helper(li, k, len(li)-1)
     return li
 
+def max_sub_arr_sum_kadane_alg(arr):
+    current_sum=arr[0]
+    max_sum=arr[0]
+    for i in arr:
+        current_sum=max(i,i+current_sum)
+        max_sum=max(max_sum, current_sum)
+    return max_sum
+
 print(find_largest([3, 7, 2, 9, 5]))
 print(find_second_largest([3,7,2,9,5]))
 print(is_sorted([1,2,3,4]))
@@ -75,3 +83,4 @@ print(remove_duplicates_two_pointer([1, 1, 2, 2, 3]))
 print(move_zeros_to_end_two_pointer([0,1,0,3,12]))
 print(reverse_array_in_place([1,2,3,4,5]))
 print(rotate_by_k([1,2,3,4,5,6,7],3))
+print(max_sub_arr_sum_kadane_alg([-5, -2, -3]))
