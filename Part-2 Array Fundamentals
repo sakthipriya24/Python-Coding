@@ -96,6 +96,6 @@ print(move_zeros_to_end_two_pointer([0,1,0,3,12]))
 print(reverse_array_in_place([1,2,3,4,5]))
 print(rotate_by_k([1,2,3,4,5,6,7],3))
 print(max_sub_arr_sum_kadane_alg([-5, -2, -3]))
-print(sub_arr_with_given_sum_sliding_window([1, 2, 3, 4, 5], 9)) # only works all positive or all negative
+print(sub_arr_with_given_sum_sliding_window([1, 2, 3, 4, 5], 9)) # only works all positive
 
 
