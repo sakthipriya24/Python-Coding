@@ -29,4 +29,5 @@ This repository provides Python coding practice problems to enhance your logical
 20. Remove duplicates in place and return the unique elements count
 21. Move zeros to end in place
 22. Rotate array by k - reverse array helper
-23. 
+23. Maximun sub array sum using Kadane's Algorithm
+24. 
